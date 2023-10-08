@@ -1,0 +1,80 @@
+// -----padding ---
+$padding: 5p, 8p, 10p, 15p, 25, 50, 1, 2;
+@each $size in $padding {
+  @if map_has_key($dmap, $size) {
+    .p#{$size} {
+      padding: map_get($dmap, $size);
+    }
+  }
+}
+// -----padding ---
+
+// -----paddingX ---
+$paddingX: 40, 50, 1;
+@each $size in $paddingX {
+  @if map_has_key($dmap, $size) {
+    $val: map_get($dmap, $size);
+    .px#{$size} {
+      padding-left: $val;
+      padding-right: $val;
+    }
+  }
+}
+// -----padding ---
+
+// -----padding y---
+$paddingY: 5p, 10p, 50, 75, 1, 150, 2, 3, 5;
+@each $size in $paddingY {
+  @if map_has_key($dmap, $size) {
+    $val: map_get($dmap, $size);
+    .py#{$size} {
+      padding-top: $val;
+      padding-bottom: $val;
+    }
+  }
+}
+// -----padding y---
+
+// -----padding top---
+$paddingTop: 10p, 1;
+@each $size in $paddingTop {
+  @if map_has_key($dmap, $size) {
+    .pt#{$size} {
+      padding-top: map_get($dmap, $size);
+    }
+  }
+}
+// -----padding top---
+
+// -----padding right---
+$paddingRight: 0, 50, 1, 2;
+@each $size in $paddingRight {
+  @if map_has_key($dmap, $size) {
+    .pr#{$size} {
+      padding-right: map_get($dmap, $size);
+    }
+  }
+}
+// -----padding right---
+
+// -----padding bottom---
+$paddingBottom: 50, 1, 2, 5;
+@each $size in $paddingBottom {
+  @if map_has_key($dmap, $size) {
+    .pb#{$size} {
+      padding-bottom: map_get($dmap, $size);
+    }
+  }
+}
+// -----padding bottom---
+
+// -----padding left---
+$paddingLeft: 50, 1, 2;
+@each $size in $paddingLeft {
+  @if map_has_key($dmap, $size) {
+    .pl#{$size} {
+      padding-left: map_get($dmap, $size);
+    }
+  }
+}
+// -----padding left---

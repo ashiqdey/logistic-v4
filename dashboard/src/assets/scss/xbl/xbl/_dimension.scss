@@ -1,0 +1,114 @@
+/*----------------height------------------*/
+$heights: (
+  100: 100%,
+  20: 20px,
+  45: 45px,
+  50: 50px,
+  70: 70px,
+  100vh: 100vh,
+);
+@each $k, $v in $heights {
+  .h#{$k} {
+    height: $v;
+  }
+}
+
+$cwidths: 50, 60, 100;
+@each $size in $cwidths {
+  .w-#{$size} {
+    width: calc(100% - #{$size}px);
+  }
+}
+
+$widths: 100, 150, 50;
+@each $size in $widths {
+  .w#{$size}p {
+    width: #{$size}px;
+  }
+}
+
+/*----------------max width------------------*/
+$maxwidths: 150, 200, 300, 400, 500, 700, 900, 1100, 1200, 1300;
+@each $size in $maxwidths {
+  .mw#{$size} {
+    max-width: #{$size}px;
+  }
+}
+
+/*----------------icon / square box------------------*/
+$ics: 5, 20, 30, 35, 40, 50;
+@each $size in $ics {
+  .ic#{$size} {
+    height: #{$size}px;
+    width: #{$size}px;
+  }
+}
+
+/*----------------top------------------*/
+.t0 {
+  top: 0;
+}
+.t10 {
+  top: 10px;
+}
+.t50 {
+  top: 50%;
+}
+
+/*----------------right------------------*/
+.r0 {
+  right: 0;
+}
+.r10 {
+  right: 10px;
+}
+/*----------------bottom------------------*/
+.b0 {
+  bottom: 0;
+}
+.b10 {
+  bottom: 10px;
+}
+/*----------------left------------------*/
+.l0 {
+  left: 0;
+}
+.l10 {
+  left: 10px;
+}
+.l50 {
+  left: 50%;
+}
+
+/*----------------transform------------------*/
+.tt-50 {
+  transform: translate(-50%, -50%);
+}
+
+.ttx-50 {
+  transform: translateX(-50%);
+}
+.tty-50 {
+  transform: translateY(-50%);
+}
+
+.rot45 {
+  transform: rotate(45deg);
+}
+.rot90 {
+  transform: rotate(90deg);
+}
+.rot-90 {
+  transform: rotate(-90deg);
+}
+.rot180 {
+  transform: rotate(180deg);
+}
+
+.lh0 {
+  line-height: 0;
+}
+
+.ls2 {
+  letter-spacing: 2px;
+}

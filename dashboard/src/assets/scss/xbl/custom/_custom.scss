@@ -1,0 +1,102 @@
+.card {
+  background-color: var(--grey-0);
+  border-radius: 10px;
+
+  .header {
+    font-weight: 500;
+    color: var(--gray4);
+  }
+}
+
+.pa-100 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.pa-50 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-bar {
+  z-index: 9999;
+  div {
+    height: 3px;
+    width: 0;
+  }
+}
+
+// mui date picker
+.flat {
+  // date picker
+  .MuiOutlinedInput-input {
+    padding: 10px !important;
+    background-color: var(--grey-0) !important;
+    border-radius: var(--input-radius);
+  }
+  .MuiOutlinedInput-notchedOutline {
+    border: unset !important;
+  }
+  // date picker
+}
+
+// mui date picker
+
+// -----------------
+.home-link-card {
+  .card:hover {
+    background-color: var(--primary-main-t8);
+  }
+}
+
+.status-chart {
+  .apexcharts-legend {
+    max-height: 300px !important;
+    padding: 0 !important;
+    > div {
+      width: 50%;
+    }
+  }
+}
+
+// .MuiOutlinedInput-root .MuiInputBase-sizeSmall {
+//   padding: 8.5px 4px 9.5px 6px !important;
+// }
+
+#update_banner {
+  &[loading='1'] .update,
+  &[loading='0'] .loader {
+    display: none;
+  }
+}
+
+.dashboard {
+  .deco {
+    height: 220px;
+  }
+
+  .flat .MuiOutlinedInput-input,
+  .insight-card {
+    background-color: rgb(255 255 255 / 69%) !important;
+    backdrop-filter: blur(18px);
+  }
+}
+
+[theme='dark'] {
+  .insight-card,
+  .flat .MuiOutlinedInput-input {
+    background-color: #1b2131a8 !important;
+  }
+}
+
+.home-link-card {
+  .bluricon {
+    filter: blur(5px);
+    opacity: 0.5;
+    transform: scale(1.2) translateY(-4px);
+  }
+}

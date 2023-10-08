@@ -1,0 +1,152 @@
+.tracking {
+  height: 100vh;
+  .table-head {
+    position: sticky;
+  }
+
+  table {
+    thead {
+      th {
+        font-weight: 500;
+        padding: 8px 0 8px 5px;
+      }
+    }
+
+    tbody .trow td {
+      padding: 12px 5px;
+    }
+  }
+
+  .trow {
+    counter-increment: countsl;
+    .sl {
+      text-align: center;
+      &:after {
+        content: counter(countsl);
+      }
+    }
+  }
+  .date-holder {
+    .date {
+      left: 30px;
+      bottom: 6px;
+      border: 1px solid var(--grey-400);
+      padding: 4px 14px;
+    }
+  }
+
+  .date-holder,
+  .trow {
+    animation: fade-trow 0.4s linear;
+  }
+
+  .trow:hover {
+    background-color: #4dfff045;
+  }
+
+  .action-btn {
+    &:after {
+      content: '';
+      position: absolute;
+      left: 0;
+      height: 100%;
+      width: calc(100% + 30px);
+      background-image: linear-gradient(90deg, var(--graye) 80%, transparent);
+      z-index: 0;
+      top: 0;
+    }
+  }
+}
+
+@keyframes fade-trow {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// add consignment
+.form-add-tracking {
+  > div {
+    padding: 0.7rem 0.5rem;
+    @include media('xl') {
+      padding: 1rem;
+    }
+  }
+}
+
+.tracking-modal {
+  .content {
+    @include media('lg') {
+      max-height: calc(100vh - 100px);
+    }
+    @include media('md', max) {
+      overflow: auto;
+    }
+  }
+
+  .statuses-wrap {
+    @include media('lg') {
+      height: 100%;
+    }
+  }
+
+  .info-tab {
+    border: 1px solid var(--grey-400);
+  }
+  .label {
+    font-size: 0.75em;
+    color: var(--gray9);
+  }
+}
+
+.status-block {
+  --color: var(--success-main);
+  --linecolor: var(--success-main);
+
+  .deco {
+    &:before {
+      content: '';
+      height: 100%;
+      width: 2px;
+      top: 24px;
+      left: 4px;
+      background-color: var(--linecolor);
+      position: absolute;
+    }
+    &:after {
+      content: '';
+      height: 10px;
+      width: 10px;
+      background-color: var(--color);
+      border-radius: 30px;
+      position: absolute;
+      top: 16px;
+      left: 0;
+    }
+  }
+
+  &[type='expected'] {
+    --color: var(--grey-400);
+  }
+  &:not([type='done']):nth-last-child(2) {
+    --linecolor: var(--grey-400);
+  }
+  &:nth-last-child(1) {
+    .deco:before {
+      display: none;
+    }
+  }
+
+  &:not(:hover) .icons {
+    display: none;
+  }
+}
+
+.consignment-view {
+  height: calc(100vh - 70px);
+}

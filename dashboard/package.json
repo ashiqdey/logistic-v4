@@ -1,0 +1,90 @@
+{
+  "name": "atn-worldwide",
+  "author": "ashiqdey",
+  "version": "1.0.0",
+  "description": "ATN worldwide admi dashboard",
+  "private": true,
+  "homepage":"/demo/logistic-v4",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .js,.jsx ./src",
+    "lint:fix": "eslint --fix --ext .js,.jsx ./src"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-react"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.7.1",
+    "@emotion/react": "^11.7.1",
+    "@emotion/styled": "^11.6.0",
+    "@hookform/resolvers": "^2.8.5",
+    "@iconify/react": "^3.1.0",
+    "@mui/lab": "^5.0.0-alpha.60",
+    "@mui/material": "^5.2.4",
+    "@mui/x-data-grid": "^5.15.2",
+    "@mui/x-date-pickers": "^5.0.0-beta.5",
+    "@reduxjs/toolkit": "^1.7.1",
+    "apexcharts": "^3.35.2",
+    "axios": "^0.27.2",
+    "date-fns": "^2.29.1",
+    "framer-motion": "^4.1.17",
+    "lodash": "^4.17.21",
+    "notistack": "^2.0.3",
+    "numeral": "^2.0.6",
+    "prop-types": "^15.7.2",
+    "react": "^18.2.0",
+    "react-apexcharts": "^1.4.0",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18.1.0",
+    "react-dropzone": "^14.2.2",
+    "react-helmet-async": "^1.2.2",
+    "react-hook-form": "^7.34.0",
+    "react-redux": "^7.2.6",
+    "react-router": "^6.2.1",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "^5.0.1",
+    "redux": "^4.1.2",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.54.4",
+    "simplebar-react": "^2.4.1",
+    "xlsx": "^0.18.5",
+    "yup": "^0.32.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@babel/eslint-parser": "^7.16.3",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^8.0.3",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.27.1",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.5.1"
+  }
+}

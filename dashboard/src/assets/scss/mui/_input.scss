@@ -1,0 +1,31 @@
+// mui customisation, borderless input
+.input-flush fieldset {
+  display: none;
+}
+
+.MuiTextField-root {
+  &.flush {
+    .MuiInputLabel-root {
+      transform: translate(12px, 12px) scale(1);
+      &[data-shrink='true'] {
+        display: none;
+      }
+    }
+    .MuiFilledInput-underline {
+      padding-top: 0;
+      border-radius: 0.5rem;
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+
+    .MuiFilledInput-input {
+      padding: 12px 4px;
+    }
+  }
+}
+
+.MuiPickersDay-root {
+  background-color: transparent;
+}

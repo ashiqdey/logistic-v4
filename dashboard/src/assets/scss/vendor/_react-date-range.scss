@@ -1,0 +1,491 @@
+.rdrDateRangePickerWrapper {
+  border-radius: 0.5rem;
+  background-color: var(--dialog-paper);
+  color: var(--grey-800);
+  overflow: hidden;
+}
+.rdrDateRangeWrapper {
+  background-color: var(--dialog-paper) !important;
+}
+.rdrCalendarWrapper {
+  font-size: 12px;
+}
+
+.rdrDateDisplayWrapper {
+  display: none;
+  // background-color: var(--grey-100);
+}
+
+.rdrDateDisplay {
+  margin: 0.833em;
+}
+
+.rdrDateDisplayItem {
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0 1px 2px 0 rgba(35, 57, 66, 0.21);
+  border: 1px solid transparent;
+}
+
+.rdrDateDisplayItem input {
+  cursor: pointer;
+  height: 2.5em;
+  line-height: 2.5em;
+  border: 0px;
+  background: transparent;
+  width: 100%;
+  color: var(--grey-600);
+}
+
+.rdrDateDisplayItemActive {
+  border-color: currentColor;
+}
+
+.rdrDateDisplayItemActive input {
+  color: var(--grey-700);
+}
+
+.rdrMonthAndYearWrapper {
+  align-items: center;
+  height: 60px;
+  width: 300px;
+  border-bottom: 1px solid var(--grey-200);
+}
+
+.rdrMonthAndYearPickers {
+  font-weight: 600;
+}
+
+.rdrMonthAndYearPickers select {
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 10px 30px 10px 10px;
+  border-radius: 4px;
+  outline: 0;
+  color: var(--grey-800);
+  background: url("data:image/svg+xml;utf8,<svg width='9px' height='6px' viewBox='0 0 9 6' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g id='Artboard' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' transform='translate(-636.000000, -171.000000)' fill-opacity='0.368716033'><g id='input' transform='translate(172.000000, 37.000000)' fill='%230E242F' fill-rule='nonzero'><g id='Group-9' transform='translate(323.000000, 127.000000)'><path d='M142.280245,7.23952813 C141.987305,6.92353472 141.512432,6.92361662 141.219585,7.23971106 C140.926739,7.5558055 140.926815,8.06821394 141.219755,8.38420735 L145.498801,13 L149.780245,8.38162071 C150.073185,8.0656273 150.073261,7.55321886 149.780415,7.23712442 C149.487568,6.92102998 149.012695,6.92094808 148.719755,7.23694149 L145.498801,10.7113732 L142.280245,7.23952813 Z' id='arrow'></path></g></g></g></svg>")
+    no-repeat;
+  background-position: right 8px center;
+  cursor: pointer;
+  text-align: center;
+  background-color: var(--dialog-paper);
+
+  &:hover {
+    background-color: var(--grey-200);
+  }
+}
+
+.rdrNextPrevButton {
+  display: block;
+  width: 35px;
+  height: 35px;
+  padding: 0;
+  border: 0;
+
+  border-radius: 0.5rem;
+  background: var(--grey-200);
+  opacity: 0.75;
+}
+
+.rdrNextPrevButton:hover {
+  opacity: 1;
+}
+
+.rdrNextPrevButton i {
+  display: block;
+  width: 0;
+  height: 0;
+  padding: 0;
+  text-align: center;
+  border-style: solid;
+  margin: auto;
+  transform: translate(-3px, 0px);
+}
+.rdrPprevButton {
+  margin-left: 8px;
+}
+
+.rdrPprevButton i {
+  border-width: 4px 6px 4px 4px;
+  border-color: transparent var(--grey-500) transparent transparent;
+  transform: translate(-3px, 0px);
+}
+.rdrNextButton {
+  margin-right: 8px;
+}
+.rdrNextButton i {
+  border-width: 4px 4px 4px 6px;
+  border-color: transparent transparent transparent var(--grey-500);
+  transform: translate(3px, 0px);
+}
+
+.rdrWeekDays {
+  padding: 0 0.833em;
+}
+
+.rdrMonth {
+  padding: 0 0.833em 1.666em 0.833em;
+  width: 300px !important;
+}
+
+.rdrMonth .rdrWeekDays {
+  padding: 0;
+}
+
+.rdrMonths.rdrMonthsVertical .rdrMonth:first-child .rdrMonthName {
+  display: none;
+}
+
+.rdrWeekDay {
+  font-weight: 400;
+  line-height: 2.667em;
+  color: var(--grey-500);
+}
+
+.rdrDay {
+  background: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 0;
+  padding: 0;
+  line-height: 40px;
+  text-align: center;
+  color: var(--grey-800);
+  height: 40px;
+  width: 40px;
+  border-radius: 20px !important;
+}
+
+.rdrDay:focus {
+  outline: 0;
+}
+
+.rdrDayNumber {
+  outline: 0;
+  font-weight: 300;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  width: 36px;
+}
+.rdrDayNumber span {
+  color: var(--grey-900) !important;
+}
+.rdrDayToday .rdrDayNumber span {
+  font-weight: 500;
+}
+
+.rdrDay:not(.rdrDayPassive) {
+  .rdrInRange ~ .rdrDayNumber span,
+  .rdrStartEdge ~ .rdrDayNumber span,
+  .rdrEndEdge ~ .rdrDayNumber span,
+  .rdrSelected ~ .rdrDayNumber span {
+    color: #fff !important;
+    font-weight: 500;
+  }
+}
+
+.rdrSelected,
+.rdrInRange,
+.rdrStartEdge,
+.rdrEndEdge {
+  background: currentColor;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  right: 0;
+  bottom: 5px;
+}
+
+.rdrSelected {
+  left: 2px;
+  right: 2px;
+}
+
+.rdrStartEdge {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  left: 2px;
+}
+
+.rdrEndEdge {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  right: 2px;
+}
+
+.rdrSelected {
+  border-radius: 40px;
+}
+
+.rdrDayStartOfMonth .rdrInRange,
+.rdrDayStartOfMonth .rdrEndEdge,
+.rdrDayStartOfWeek .rdrInRange,
+.rdrDayStartOfWeek .rdrEndEdge {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  left: 2px;
+}
+
+.rdrDayEndOfMonth .rdrInRange,
+.rdrDayEndOfMonth .rdrStartEdge,
+.rdrDayEndOfWeek .rdrInRange,
+.rdrDayEndOfWeek .rdrStartEdge {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+  right: 2px;
+}
+
+.rdrDayStartOfMonth .rdrDayInPreview,
+.rdrDayStartOfMonth .rdrDayEndPreview,
+.rdrDayStartOfWeek .rdrDayInPreview,
+.rdrDayStartOfWeek .rdrDayEndPreview {
+  border-top-left-radius: 1.333em;
+  border-bottom-left-radius: 1.333em;
+  border-left-width: 1px;
+  left: 0px;
+}
+
+.rdrDayEndOfMonth .rdrDayInPreview,
+.rdrDayEndOfMonth .rdrDayStartPreview,
+.rdrDayEndOfWeek .rdrDayInPreview,
+.rdrDayEndOfWeek .rdrDayStartPreview {
+  border-top-right-radius: 1.333em;
+  border-bottom-right-radius: 1.333em;
+  border-right-width: 1px;
+  right: 0px;
+}
+
+.rdrDayStartPreview,
+.rdrDayInPreview,
+.rdrDayEndPreview {
+  position: absolute;
+  top: 3px;
+  left: 0px;
+  right: 0px;
+  bottom: 3px;
+  pointer-events: none;
+  border: 0px solid currentColor;
+  z-index: 1;
+}
+
+.rdrDayStartPreview {
+  border-top-width: 1px;
+  border-left-width: 1px;
+  border-bottom-width: 1px;
+  border-top-left-radius: 1.333em;
+  border-bottom-left-radius: 1.333em;
+  left: 0px;
+}
+
+.rdrDayInPreview {
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+}
+
+.rdrDayEndPreview {
+  border-top-width: 1px;
+  border-right-width: 1px;
+  border-bottom-width: 1px;
+  border-top-right-radius: 1.333em;
+  border-bottom-right-radius: 1.333em;
+  right: 2px;
+  right: 0px;
+}
+
+.rdrDefinedRangesWrapper {
+  font-size: 12px;
+  width: 200px;
+  border-right: solid 1px var(--grey-200);
+}
+
+.rdrDefinedRangesWrapper .rdrStaticRangeSelected {
+  color: currentColor;
+  font-weight: 600;
+}
+
+.rdrStaticRange {
+  border: 0;
+  cursor: pointer;
+  display: block;
+  outline: 0;
+  border-bottom: 1px solid var(--grey-100);
+  padding: 0;
+  background: var(--dialog-paper);
+}
+
+.rdrStaticRange:hover .rdrStaticRangeLabel,
+.rdrStaticRange:focus .rdrStaticRangeLabel {
+  background: var(--grey-200);
+}
+
+.rdrStaticRangeLabel {
+  display: block;
+  outline: 0;
+  line-height: 18px;
+  padding: 10px 20px;
+  text-align: left;
+}
+
+.rdrInputRanges {
+  padding: 10px 0;
+}
+
+.rdrInputRange {
+  align-items: center;
+  padding: 5px 20px;
+}
+
+.rdrInputRangeInput {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 4px;
+  text-align: center;
+  border: solid 1px rgb(222, 231, 235);
+  margin-right: 10px;
+  color: rgb(108, 118, 122);
+}
+
+.rdrInputRangeInput:focus,
+.rdrInputRangeInput:hover {
+  border-color: rgb(180, 191, 196);
+  outline: 0;
+  color: #333;
+}
+
+.rdrDayPassive {
+  pointer-events: none;
+}
+.rdrDayPassive .rdrDayNumber span {
+  color: #d5dce0;
+}
+
+.rdrDayPassive .rdrInRange,
+.rdrDayPassive .rdrStartEdge,
+.rdrDayPassive .rdrEndEdge,
+.rdrDayPassive .rdrSelected,
+.rdrDayPassive .rdrDayStartPreview,
+.rdrDayPassive .rdrDayInPreview,
+.rdrDayPassive .rdrDayEndPreview {
+  display: none;
+}
+
+.rdrDayDisabled,
+.rdrDayPassive {
+  opacity: 0.5;
+}
+
+.rdrDayDisabled .rdrInRange,
+.rdrDayDisabled .rdrStartEdge,
+.rdrDayDisabled .rdrEndEdge,
+.rdrDayDisabled .rdrSelected,
+.rdrDayDisabled .rdrDayStartPreview,
+.rdrDayDisabled .rdrDayInPreview,
+.rdrDayDisabled .rdrDayEndPreview {
+  filter: grayscale(100%) opacity(60%);
+}
+
+.rdrMonthName {
+  text-align: left;
+  font-weight: 600;
+  color: #849095;
+  padding: 0.833em;
+}
+
+.rdrDateDisplayItem {
+  background-color: transparent;
+  box-shadow: none;
+  border-radius: 0.5rem;
+  border: 1px dotted transparent;
+}
+.rdrDateDisplayItemActive {
+  background-color: var(--grey-100);
+  border: 1px dotted var(--grey-300);
+}
+
+.rdrDays {
+  button {
+    &.rdrDaysHovered {
+      background-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .rdrDayNumber {
+      z-index: 3;
+    }
+
+    .rdrStartEdge,
+    .rdrEndEdge {
+      top: 2px;
+      bottom: 2px;
+      left: 2px;
+      right: 2px;
+      height: 36px;
+      width: 36px;
+      z-index: 2;
+    }
+    .rdrInRange {
+      height: 36px;
+      width: 40px;
+      top: 2px;
+      z-index: 2;
+    }
+
+    &.rdrDayStartOfWeek .rdrDayInpreview,
+    &.rdrDayStartOfWeek .rdrInRange,
+    &.rdrDayStartOfMonth .rdrInRange,
+    .rdrStartEdge {
+      width: 40px;
+      left: 0;
+    }
+
+    &.rdrDayEndOfWeek .rdrDayInpreview,
+    &.rdrDayEndOfWeek .rdrInRange,
+    &.rdrDayEndOfMonth .rdrInRange,
+    .rdrEndEdge {
+      width: 40px;
+      left: 0;
+    }
+
+    .rdrStartEdge.rdrEndEdge {
+      height: 36px;
+      width: 36px;
+      left: 2px;
+    }
+
+    .rdrDayStartPreview,
+    .rdrDayInPreview,
+    .rdrDayEndPreview {
+      left: 2px;
+      height: 36px;
+      width: 40px;
+      border-color: var(--grey-400);
+      border-style: dashed;
+      z-index: 1;
+    }
+
+    .rdrDayStartPreview {
+      left: 0;
+    }
+    .rdrDayEndPreview {
+      // left:0;
+    }
+
+    .rdrDayStartPreview.rdrDayEndPreview {
+      left: 2px;
+      height: 36px !important;
+      width: 36px !important;
+    }
+  }
+}

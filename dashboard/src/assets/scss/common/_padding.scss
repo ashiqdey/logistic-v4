@@ -1,0 +1,11 @@
+// -----padding-----
+@each $key, $value in $spacings {
+  .p-#{$key} {
+    padding: $value * $spacing;
+  }
+
+  .py-#{$key} {
+    padding-top: $value * $spacing;
+    padding-bottom: $value * $spacing;
+  }
+}

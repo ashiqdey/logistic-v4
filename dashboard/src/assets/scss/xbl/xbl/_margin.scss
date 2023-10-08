@@ -1,0 +1,67 @@
+// -----margin ---
+$margin: 5p, 1, auto;
+@each $size in $margin {
+  @if map_has_key($dmap, $size) {
+    .m#{$size} {
+      margin: map_get($dmap, $size);
+    }
+  }
+}
+// -----margin ---
+
+// -----margin y---
+$marginY: 1, 2, 4;
+@each $size in $marginY {
+  @if map_has_key($dmap, $size) {
+    $val: map_get($dmap, $size);
+    .my#{$size} {
+      margin-top: $val;
+      margin-bottom: $val;
+    }
+  }
+}
+// -----margin y---
+
+// -----margin top---
+$marginTop: 50, 1, 2, 3, 5;
+@each $size in $marginTop {
+  @if map_has_key($dmap, $size) {
+    .mt#{$size} {
+      margin-top: map_get($dmap, $size);
+    }
+  }
+}
+// -----margin top---
+
+// -----margin right---
+$marginRight: 10p, 25, 50, 1;
+@each $size in $marginRight {
+  @if map_has_key($dmap, $size) {
+    .mr#{$size} {
+      margin-right: map_get($dmap, $size);
+    }
+  }
+}
+// -----margin right---
+
+// -----margin bottom---
+$marginBottom: 50, 2;
+@each $size in $marginBottom {
+  @if map_has_key($dmap, $size) {
+    .mb#{$size} {
+      margin-bottom: map_get($dmap, $size);
+    }
+  }
+}
+// -----margin bottom---
+
+// -----margin left---
+$marginLeft: 0, 50;
+@each $size in $marginLeft {
+  @if map_has_key($dmap, $size) {
+    .ml#{$size} {
+      margin-left: map_get($dmap, $size);
+    }
+  }
+}
+// -----margin left---

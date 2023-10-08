@@ -1,0 +1,23 @@
+// tooltip
+.apexcharts-tooltip {
+  backdrop-filter: blur(6px);
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4) !important;
+
+  .apexcharts-tooltip-title {
+    border: none !important;
+    background-color: var(--grey-0) !important;
+    font-weight: 700;
+  }
+  &.apexcharts-theme-light {
+    border: none !important;
+    background-color: rgba(255, 255, 255, 0.7) !important;
+  }
+  &.apexcharts-theme-dark {
+    box-shadow: none;
+  }
+}
+
+// legend
+.apexcharts-legend-series {
+  display: inline-flex !important;
+}

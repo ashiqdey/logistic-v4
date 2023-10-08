@@ -1,0 +1,43 @@
+$breakpoints: (
+  'xs': 0px,
+  'sm': 584px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1400px,
+  'k2': 1920px,
+  'k4': 2560px,
+);
+/*
+$xs: 0px;
+$sm: 584px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$k2: 1920px;
+$k4: 2560px;
+*/
+
+// dimension map
+$dmap: (
+  5p: 5px,
+  8p: 8px,
+  10p: 10px,
+  15p: 15px,
+
+  25: 0.25rem,
+  40: 0.4rem,
+  50: 0.5rem,
+  75: 0.75rem,
+  1: 1rem,
+  125: 1.25rem,
+  150: 1.5rem,
+  175: 1.75rem,
+  2: 2rem,
+  3: 3rem,
+  4: 4rem,
+  5: 5rem,
+  0: 0,
+  auto: auto,
+);

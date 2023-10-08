@@ -1,0 +1,37 @@
+// -----z-index-----
+@each $zindex, $value in $zindexs {
+  .zindex-#{$zindex} {
+    z-index: $value;
+  }
+}
+
+// -----truncate text with-----
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-truncate-2,
+.text-truncate-3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.text-truncate-3 {
+  -webkit-line-clamp: 3;
+}
+
+// -----overflow-----
+.overflow-hidden {
+  overflow: hidden;
+}
+
+// -----opacity-----
+$opacitys: 0, 50, 75, 100;
+@each $value in $opacitys {
+  .o-#{$value} {
+    opacity: $value * 0.01;
+  }
+}

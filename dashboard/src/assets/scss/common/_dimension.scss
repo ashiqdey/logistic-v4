@@ -1,0 +1,26 @@
+// -----width-----
+.maxw-400 {
+  max-width: 400px;
+}
+.w-100px {
+  width: 100px;
+}
+
+$widths: 100, 50;
+@each $value in $widths {
+  .w-#{$value} {
+    width: $value * 1%;
+  }
+}
+
+// -----height-----
+.minh-100vh {
+  min-height: 100vh;
+}
+
+$heights: 100;
+@each $value in $heights {
+  .h-#{$value} {
+    height: $value * 1%;
+  }
+}

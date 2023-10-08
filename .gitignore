@@ -1,0 +1,9 @@
+
+backend/env.php
+dashboard/node_modules
+dashboard/build
+dashboard/package-lock.json
+dashboard/.env.development
+dashboard/.env.production
+
+

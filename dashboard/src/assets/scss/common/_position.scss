@@ -1,0 +1,26 @@
+// -----position-----
+$positions: (
+  a: absolute,
+  f: fixed,
+  r: relative,
+  s: sticky,
+);
+@each $key, $value in $positions {
+  .p#{$key} {
+    position: $value;
+  }
+}
+
+// -----top, right, bottom , left-----
+.t-0 {
+  top: 0;
+}
+.r-0 {
+  right: 0;
+}
+.b-10 {
+  bottom: 10px;
+}
+.l-0 {
+  left: 0;
+}

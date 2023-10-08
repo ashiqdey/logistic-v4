@@ -1,0 +1,91 @@
+/*
+https://glyphter.com
+dashboard@artlogisticsindia.com
+Qwerty098#
+*/
+
+@font-face {
+  font-family: "art icons";
+  src: url("../../fonts/art-icons.woff");
+  font-weight: normal;
+  font-style: normal;
+}
+[class*="ix-"]:before {
+  display: inline-block;
+  font-family: "art icons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.ix-search:before {
+  content: "\0041";
+}
+.ix-settings:before {
+  content: "\0042";
+}
+.ix-truck:before {
+  content: "\0043";
+}
+.ix-user:before {
+  content: "\0044";
+}
+.ix-x:before {
+  content: "\0045";
+}
+.ix-analytics:before {
+  content: "\0046";
+}
+.ix-arrow:before {
+  content: "\0047";
+}
+.ix-box:before {
+  content: "\0048";
+}
+.ix-doc-checked:before {
+  content: "\0049";
+}
+.ix-feedback:before {
+  content: "\004a";
+}
+.ix-help:before {
+  content: "\004b";
+}
+.ix-home:before {
+  content: "\004c";
+}
+.ix-location:before {
+  content: "\004d";
+}
+.ix-logout:before {
+  content: "\004e";
+}
+.ix-delete:before {
+  content: "\004f";
+}
+.ix-edit:before {
+  content: "\0050";
+}
+.ix-plus:before {
+  content: "\0051";
+}
+.ix-upload:before {
+  content: "\0052";
+}
+
+.ix-call:before {
+  content: "\0053";
+}
+.ix-whatsapp:before {
+  content: "\0054";
+}
+.ix-copy:before {
+  content: "\0055";
+}
+.ix-email:before {
+  content: "\0056";
+}
+.ix-tick:before {
+  content: "\0057";
+}
